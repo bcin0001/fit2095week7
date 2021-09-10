@@ -86,4 +86,23 @@ module.exports = {
             res.json(movies);
         });
     },
+
+
+    
+    // EXTRA TASK
+    getMovieCount: function (req, res) {
+        Movie.findOne({ _id: req.params.id })
+            .populate('actors')
+            .exec(function (err, movie) {
+                if (err) return res.status(400).json(err);
+                if (!movie) return res.status(404).json();
+                res.json({
+                    status: "success",
+                    movieId: movie._id,
+                    actorCount: movie.actors.length
+                });
+        });
+    },
+
+
 };

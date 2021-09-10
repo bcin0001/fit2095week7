@@ -21,7 +21,6 @@ mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true}, (err) =>
     console.log("Connection established"); 
 });
 
-
 //END POINTS
 
 //Actor RESTFul endpoionts 
@@ -41,4 +40,10 @@ app.put('/movies/:id', movies.updateOne);
 app.delete('/movies/:id', movies.deleteOne);
 app.delete('/movies/:movieId/:actorId', movies.removeActor);
 app.put('/movies/:movieId/:actorId', movies.addActor);
+
+// EXTRA TASK
+app.get('/movies/actor-count/:id', movies.getMovieCount);
+
 app.get('/movies/:year1/:year2', movies.getAllYear);
+
+
