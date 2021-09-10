@@ -1,16 +1,25 @@
 {
-  "name": "ws7",
+  "name": "week7lab",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bobbytm8/lab-7.git"
+  },
+  "author": "Bobby Tang",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bobbytm8/lab-7/issues"
+  },
+  "homepage": "https://github.com/Bobbytm8/lab-7#readme",
   "dependencies": {
+    "body-parser": "^0.1.0",
     "express": "^4.17.1",
-    "mongoose": "^6.0.5"
+    "mongodb": "^4.1.1",
+    "mongoose": "^5.10.5"
   }
 }
